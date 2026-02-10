@@ -1,3 +1,4 @@
+import os
 import json
 import psycopg2
 import boto3
@@ -9,7 +10,7 @@ from psycopg2.extensions import STATUS_BEGIN
 # rds settings
 rds_host = "localhost"
 user = "tanos"
-password = "***REMOVED***"
+password = os.environ.get("PASSWORD")
 database = "tanos"
 port = 5432
 
